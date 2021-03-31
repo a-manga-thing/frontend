@@ -3,25 +3,15 @@
     <title>/a/ manga thing</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/catalog.css">
 </head>
 <body>
-    <center>
-        <img src="img/out.png"/>
-		<h1>/a/ manga thing</h1>
-        | <a href="index.html">Home</a>
-        | <a href="manga.html">Manga</a>
-        | <a href="contributing.html">Contributing</a>
-        | <a href="contact.html">Contact</a> |
-    </center>
-    <p>
-    &nbsp&nbsp&nbsp&nbsp
-    Generated from /db.json
-    <center>
+    <div id="header">
         <input id="search" type="text" placeholder="Search">
-        <button id="loadButton" type="button" onclick="load();">load</button>
-    </center>
-    <table id="titles">
-    </table>
+        <img id="logo" src="img/logo.png"/>
+    </div>
+    <div id="titles">
+    </div>
     <script type="text/javascript" src="js/catalog.js"></script>
 </body>
 </html>

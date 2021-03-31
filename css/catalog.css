@@ -1,0 +1,31 @@
+#titles {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    top: 5em;
+    grid-gap: 1em;
+    border: 2em solid rgba(180, 180, 180, 1);
+    width: 100%;
+}
+
+.block {
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.desc {
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
+    border-left: 1em solid rgba(180, 180, 180, 1);
+}
+
+.thumbnail {
+    float: left;
+    width: 50%;
+    height: auto;
+}
