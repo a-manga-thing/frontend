@@ -6,7 +6,7 @@
     grid-template-columns: repeat(3, 1fr);
     top: 5em;
     grid-gap: 1em;
-    border: 2em solid rgba(180, 180, 180, 1);
+    border: 2em solid var(--light-grey);
     width: 100%;
 }
 
@@ -21,7 +21,7 @@
     box-sizing: border-box;
     width: 50%;
     float: right;
-    border-left: 1em solid rgba(180, 180, 180, 1);
+    border-left: 1em solid var(--light-grey);
 }
 
 .thumbnail {
