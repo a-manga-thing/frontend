@@ -37,12 +37,8 @@ function load() {
                 {textContent: "Last Update: ?"}
             ));
             desc.appendChild(Object.assign(
-                document.createElement("p"),
-                {textContent: "Link: "}
-            ))
-            .appendChild(Object.assign(
                 document.createElement("a"),
-                {href: "reader.html?manga="+manga["id"], textContent: "reader"}
+                {href: "title.html?manga="+manga["id"], textContent: "Chapters"}
             ));
 
             row.appendChild(cover);
