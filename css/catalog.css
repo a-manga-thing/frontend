@@ -1,13 +1,20 @@
 #titles {
-    box-sizing: border-box;
     position: absolute;
+    box-sizing: border-box;
     left: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    top: 5em;
+    top: 11em;
     grid-gap: 1em;
-    border: 2em solid var(--light-grey);
+    border-left: 2em solid var(--light-grey);
+    border-right: 2em solid var(--light-grey);
     width: 100%;
+}
+
+#label {
+    position: absolute;
+    left: 2em;
+    top: 4em;
 }
 
 .block {

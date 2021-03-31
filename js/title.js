@@ -4,7 +4,7 @@ function load() {
     if(url.searchParams.has("manga")){
         id = url.searchParams.get("manga");
     }
-    fetch("https://amangathing.ddns.net/db.json")
+    fetch("/db.json")
     .then(res => res.json())
     .then(function (res) {
         manga = res[id];
@@ -22,7 +22,7 @@ function load() {
         ));
         table.appendChild(Object.assign(
             document.createElement("p"),
-            {textContent: "Content ID: dlsfksdlfkjsdlkfjsdlkfjslkfjslkfjslkjflk"}
+            {textContent: "Content ID: "+manga["cid"]}
         ));
 
         var table = document.getElementById("chaptersTable");
