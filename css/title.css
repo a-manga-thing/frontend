@@ -1,0 +1,84 @@
+body {
+    background-color: rgba(180, 180, 180, 1);
+}
+
+#header {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 5em;
+    background-color: rgba(120, 120, 120, 1);
+    z-index: 100;
+    overflow: hidden;
+}
+
+#search {
+    position: absolute;
+    transform: translate(0%, 50%);
+    background-color: rgba(80, 80, 80, 1);
+    border: none;
+    padding: 1em;
+    border-radius: 1em;
+    left: 10%;
+    width: 50%;
+    height: 50%;
+}
+
+#logo {
+    position: absolute;
+    height: 180%;
+    left: 90%;
+}
+
+#content {
+    position: absolute;
+    top: 5em;
+    left: 0%;
+    height: auto;
+    width: 100%;
+}
+
+#info {
+    box-sizing: border-box;
+    width: 100%;
+    height: 25em;
+    border-top: 1em solid rgba(180, 180, 180, 1);
+    border-bottom: 1em solid rgba(180, 180, 180, 1);
+    border-left: 3em solid rgba(180, 180, 180, 1);
+    border-right: 3em solid rgba(180, 180, 180, 1);
+    background-color: rgba(120, 120, 120, 1);
+}
+
+#cover {
+    height: 23em;
+    width: 16em;
+    float: left;
+}
+
+#infoTable {
+    position: absolute;
+    left: 20em;
+}
+
+#chaptersTable {
+    width: 90%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+@media screen and (min-width: 1000px) {
+    #info {
+        width: 50%;
+        float: left;
+    }
+    #chaptersTable {
+        width: 48%;
+        float: left;
+    }
+}
+
+td {
+    border-top: 1px solid black;
+}
+

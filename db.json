@@ -1,0 +1,25 @@
+[
+    {
+	"id" : "0", "title" : "Boku no Kokoro no Yabai Yatsu", "cid" : "bafybeihnoou2av5w2bzmwkl6hi25scyzz6sjwdfqp4cwq2ikf6dfmev3ta",
+	"chapters" : [
+	    { "no": "1", "title" : "Chapter title", "group": "Group", "date": "01-01-2021", "pages": "69"},
+	    { "no": "2", "title" : "Chapter title", "group": "Group", "date": "01-03-2021", "pages": "45"}
+	]
+    },
+    {
+	"id" : "1", "title" : "Otoyomegatari", "cid" : "bafybeigfivshobq4h5x5qwmttgqimaufmcjl6hpjcrsedj7wxxduphp7g4",
+	"chapters" : [
+	    { "no": "1", "title" : "Chapter title", "group": "Group", "date": "01-01-2021", "pages": 69}
+	]
+    },
+    {
+	"id" : 2, "title" : "Spy X Family", "cid" : "bafybeibgnpbredeofwp364qomqpth55a6ui3oiy2ucm35fo3eimquoeob4",
+	"chapters" : [
+	    { "no": "1", "title" : "Chapter title One", "group": "Group", "date": "01-01-2021", "pages": "69"},
+	    { "no": "2", "title" : "Chapter title Two", "group": "Group", "date": "01-01-2021", "pages": "69"},
+	    { "no": "3", "title" : "Chapter title Three", "group": "Group", "date": "01-01-2021", "pages": "69"},
+	    { "no": "4", "title" : "Chapter title Four", "group": "Group", "date": "01-01-2021", "pages": "69"}
+	]
+    }
+]
+
