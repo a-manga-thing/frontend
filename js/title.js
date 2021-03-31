@@ -26,15 +26,12 @@ function load() {
         ));
 
         var table = document.getElementById("chaptersTable");
-        manga["chapters"].forEach(chapter => {
+        manga["chapters"].forEach(function (chapter, index) {
             var row = table.appendChild(document.createElement("tr"));
-            row.appendChild(Object.assign(
-                document.createElement("td"),
-                {textContent: chapter["no"]}
-            ));
-            row.appendChild(Object.assign(
-                document.createElement("td"),
-                {textContent: chapter["title"]}
+            row.appendChild(document.createElement("td"))
+            .appendChild(Object.assign(
+                document.createElement("a"),
+                {textContent: chapter["no"]+". "+chapter["title"], href: "reader.html?manga="+manga["id"]+"&chapter="+index}
             ));
             row.appendChild(Object.assign(
                 document.createElement("td"),
