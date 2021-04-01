@@ -22,7 +22,7 @@ function load() {
         ));
         table.appendChild(Object.assign(
             document.createElement("p"),
-            {textContent: "Content ID: "+manga["cid"]}
+            {textContent: "idk"}
         ));
 
         var table = document.getElementById("chaptersTable");

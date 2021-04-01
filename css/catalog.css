@@ -3,12 +3,36 @@
     box-sizing: border-box;
     left: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     top: 11em;
     grid-gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
     border-left: 2em solid var(--light-grey);
     border-right: 2em solid var(--light-grey);
     width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+    #titles {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #titles {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #titles {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    #titles {
+        grid-template-columns: repeat(6, 1fr);
+    }
 }
 
 #label {

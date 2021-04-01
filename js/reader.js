@@ -194,7 +194,7 @@ fetch("/db.json")
     pageNo = res[manga].chapters[chapter].pages;
     // "https://ipfs.io/api/v0/ls/"+res[manga][chapter]["cid"];
     title = res[manga].title;
-    cid = res[manga].cid;
+    cid = res[manga].chapters[chapter].cid;
 
 // --------------------------------------------------------
 // Initialize
