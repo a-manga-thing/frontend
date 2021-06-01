@@ -4,23 +4,22 @@
 
 function load_titles(remote) {
     base = remote;
-    remote = remote+"/manga/search?title=";
+    remote = remote+"/manga/search?sort";
     fetch(remote)
     .then(res => res.json())
     .then(function (res) {
         var table = document.querySelector("#title_list #table tbody");
         res.forEach(manga => {
             //row 1
-            var first_row = document.createElement("tr");
+            var first_row = table.insertRow(-1);
             first_row.className = "first_row";
             table.appendChild(first_row);
 
             //thumbnail
-            first_row.appendChild(Object.assign(
-                document.createElement("td"),
-                {rowSpan: "2", className: "thumbnail"}
-            ))
-            .appendChild(Object.assign(
+            let thumb = first_row.insertCell(-1);
+            thumb.rowSpan = "2";
+            thumb.className = "thumbnail"
+            thumb.appendChild(Object.assign(
                 document.createElement("a"),
                 {href: "/title.html?id="+manga["id"]}
             ))
@@ -29,11 +28,9 @@ function load_titles(remote) {
                 {className: "thumbnail", src: base+"/thumbnail/"+manga["id"]+".webp"}
             ));
             //title
-            first_row.appendChild(Object.assign(
-                document.createElement("td"),
-                {className: "stretch"}
-            ))
-            .appendChild(Object.assign(
+            let title = first_row.insertCell(-1);
+            title.className = "stretch";
+            title.appendChild(Object.assign(
                 document.createElement("a"),
                 {href: "/title.html?id="+manga["id"]}
             ))
@@ -43,37 +40,26 @@ function load_titles(remote) {
             ));
 
             //artist
-            first_row.appendChild(Object.assign(
-                document.createElement("td"),
-                {textContent: manga["artists"][0]}
-            ));
-
+            first_row.insertCell(-1)
+            .textContent = manga["artists"][0];
             //status
-            first_row.appendChild(Object.assign(
-                document.createElement("td"),
-                {textContent: manga["publication_status"]}
-            ));
+            first_row.insertCell(-1)
+            .textContent = manga["publication_status"];
 
             //chapters
-            first_row.appendChild(Object.assign(
-                document.createElement("td"),
-                {textContent: ""}
-            ));
+            first_row.insertCell(-1)
+            .textContent = "";
 
             //timestamp
-            first_row.appendChild(Object.assign(
-                document.createElement("td"),
-                {textContent: ""}
-            ));
+            first_row.insertCell(-1)
+            .textContent = "";
 
             //row 2
-            var second_row = document.createElement("tr");
+            var second_row = table.insertRow(-1);
             second_row.className = "second_row";
-            table.appendChild(second_row);
 
             //tags
-            var tag_cell = document.createElement("td");
-            second_row.appendChild(tag_cell);
+            var tag_cell = second_row.insertCell(-1);
             manga["genres"].forEach(tag => {
                 tag_cell.appendChild(Object.assign(
                     document.createElement("span"),
@@ -82,17 +68,13 @@ function load_titles(remote) {
             });
 
             //author
-            second_row.appendChild(Object.assign(
-                document.createElement("td"),
-                {textContent: manga["authors"][0]}
-            ));
+            second_row.insertCell(-1)
+            .textContent = manga["authors"][0];
 
             //filler
-            second_row.appendChild(Object.assign(
-                document.createElement("td"),
-                {colSpan: "2"}
-            ))
-            .appendChild(Object.assign(
+            let filler = second_row.insertCell(-1);
+            filler.colSpan = "2"
+            filler.appendChild(Object.assign(
                 document.createElement("a"),
                 {href: "https://mangaupdates.com/series.html?id=" + manga["mangaupdates_id"]}
             ))
@@ -102,10 +84,8 @@ function load_titles(remote) {
             ));
 
             //time since last update
-            second_row.appendChild(Object.assign(
-                document.createElement("td"),
-                {textContent: "(" + "ago)"}
-            ));
+            second_row.insertCell(-1)
+            .textContent = Math.floor(((Date.now()/1000) - manga["last_updated"])/3600).toString() + " hours ago";
         });
     });
 }
