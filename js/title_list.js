@@ -4,7 +4,7 @@
 
 function load_titles(remote) {
     base = remote;
-    remote = remote+"/manga/search?title=";
+    remote = remote+"/manga/search?sort";
     fetch(remote)
     .then(res => res.json())
     .then(function (res) {
