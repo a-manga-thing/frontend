@@ -104,7 +104,7 @@ function load_titles(remote) {
             //time since last update
             second_row.appendChild(Object.assign(
                 document.createElement("td"),
-                {textContent: "(" + "ago)"}
+                {textContent: Math.floor(((Date.now()/1000) - manga["last_updated"])/3600).toString() + " hours ago"}
             ));
         });
     });
